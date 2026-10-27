@@ -30,6 +30,12 @@ jobs:
       - name: Build
         run: go build -v ./...
 
+      - name: Test
+        run: go test -race -v ./...
+
+      - name: Vet
+        run: go vet ./...
+
 # turn off linting checks for now until they are resolved, put back later
 
 #  lint:
